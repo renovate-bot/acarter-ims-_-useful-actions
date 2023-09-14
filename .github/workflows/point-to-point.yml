@@ -16,7 +16,8 @@ jobs:
           oauth-client-id: ${{ secrets.TS_OAUTH_CLIENT_ID }}
           oauth-secret: ${{ secrets.TS_OAUTH_SECRET }}
           tags: tag:prod
-
+          authkey: ${{ secrets.TS_AUTHKEY }}
+          HOSTNAME: ${{ env.HOSTNAME }}
       - name: check for hello.ts.net in netmap
         run:
           tailscale status 
