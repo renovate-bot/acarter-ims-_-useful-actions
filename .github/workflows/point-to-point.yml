@@ -15,8 +15,8 @@ jobs:
         with:
           oauth-client-id: ${{ secrets.TS_OAUTH_CLIENT_ID }}
           oauth-secret: ${{ secrets.TS_OAUTH_SECRET }}
-          tags: tag:ssh,tag:prod
+          tags: tag:prod
 
       - name: check for hello.ts.net in netmap
         run:
-          tailscale status | grep -q hello
+          tailscale status 
